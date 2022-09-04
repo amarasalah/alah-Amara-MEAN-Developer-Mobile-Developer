@@ -988,7 +988,7 @@ display: none;
   position: absolute;
   height: 100%;
   background-color: var(--main-color);
-  transition: width 2s linear;
+  transition: width 1s linear;
 
 }
 
