@@ -5,6 +5,8 @@ const secondsEl = document.getElementById("seconds");
 const ourSkillsSection = document.querySelector(".our-skills");
 const progressEl = document.querySelectorAll(".progress span");
 let countDate = new Date("september 11 2022").getTime();
+const skillCounting = document.querySelectorAll("#percent-skill");
+let started = false;
 
 
 
@@ -31,10 +33,31 @@ let counter = setInterval(()=>{
     }
 },1000)
 
+
+function startCount(el){
+    let goal = el.dataset.goal;
+    let counter = setInterval(()=>{
+        el.textContent++;
+        if (el.textContent == goal) {
+            clearInterval(counter);
+        }
+    },1000/goal)
+}
+
+//  startCount(document.querySelectorAll("#percent-skill")[0]);
+
+
+
+
 window.onscroll = function() {
-    if (window.scrollY >= ourSkillsSection.offsetTop){
+    if (window.scrollY >= ourSkillsSection.offsetTop - 100){
         progressEl.forEach((e) => {
             e.style.width = e.dataset.width
         });
+        if (!started) { 
+            skillCounting.forEach((e)=> startCount(e));
+        }
+        started = true;
     }
 };
+
