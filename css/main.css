@@ -1159,6 +1159,10 @@ margin-top: 60px;
   color: var(--main-color);
 
 }
+.latest-event .container  .count-down .count span.nums:nth-child(3){
+  margin-left: -50px;
+
+}
 .latest-event .container  .count-down .count span.letters{
   padding:8px  10px;
   border-top: 1px solid #d4d4d4 ;
