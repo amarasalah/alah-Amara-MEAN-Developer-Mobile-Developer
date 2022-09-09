@@ -7,6 +7,7 @@ const progressEl = document.querySelectorAll(".progress span");
 let countDate = new Date("september 11 2022").getTime();
 const skillCounting = document.querySelectorAll("#percent-skill");
 let started = false;
+const backToTopEl = document.querySelector(".up")
 
 
 
@@ -59,5 +60,15 @@ window.onscroll = function() {
         }
         started = true;
     }
+        
+    this.scrollY >= 1000 ? backToTopEl.classList.add("show"):backToTopEl.classList.remove("show");
+
 };
+backToTopEl.onclick = ()=>{
+    window.scrollTo({
+        top: 0,
+        behaviour: "smooth",
+    })
+};
+
 

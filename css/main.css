@@ -1749,3 +1749,24 @@ transition:var(--main-transition);
     margin:  15px 0 0;
     text-align: center;
   }
+  .up{
+    position: fixed;
+    bottom: 10px;
+    right: -100px;
+    background-color: #2196f3ba;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+    transition: 0.3s;
+    cursor: pointer;
+    z-index: 100;
+  }
+   .up.show{
+    right : 10px;
+   }
